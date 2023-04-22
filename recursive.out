@@ -1,0 +1,83 @@
+New names:
+• `` -> `...1`
+Message d'avis :
+Dans nominalTrainWorkflow(x = x, y = y, wts = weights, info = trainInfo,  :
+  There were missing values in resampled performance measures.
+[1] "dl_MKTCP"  "d_VIX"     "d_gtrends" "rv_w"     
+[1] "start cluster for predictions"
+                ME     RMSE      MAE      MPE     MAPE
+Test set 0.5892427 1.622693 1.240952 14.06778 30.28555
+[1] 3
+[1] "vars abess:"
+[1] "d_VIX"     "d_gtrends" "rv_w"     
+                ME     RMSE      MAE      MPE     MAPE
+Test set 0.6101606 1.612404 1.237028 14.65892 30.02303
+Time difference of 5.671018 mins
+  num.trees mtry block.size min.node.size prediction_error
+1       500    1          7             5         5.989184
+2       750    1          7             5         5.968679
+3      1000    1          7             5         5.974687
+4       500    2          7             5         6.016259
+5       750    2          7             5         6.028452
+6      1000    2          7             5         6.018929
+ [1] "dl_CPTRA"  "dl_ETRVU"  "dl_HRATE"  "dl_MWNTD"  "dl_MWTRV"  "dl_NADDU" 
+ [7] "dl_NTRAN"  "dl_NTRBL"  "dl_NTREP"  "dl_SPY"    "dl_DJI"    "d_CPTRV"  
+[13] "d_ETRAV"   "d_TRFEE"   "d_TRVOU"   "d_VIX"     "d_gtrends" "rv_d"     
+[19] "rv_w"     
+                ME     RMSE      MAE      MPE     MAPE
+Test set 0.4451034 1.641015 1.224435 9.649998 31.14848
+               ME    RMSE      MAE      MPE     MAPE
+Test set 1.216345 2.03484 1.738194 24.44735 36.60472
+                 ME     RMSE      MAE       MPE     MAPE
+Test set 0.06646937 1.775739 1.309884 -7.914887 40.33709
+                      ME     RMSE      MAE       MPE     MAPE
+Log - GARCH   1.21634504 2.034840 1.738194 24.447352 36.60472
+Log - TGARCHX 0.06646937 1.775739 1.309884 -7.914887 40.33709
+LASSO         0.58924275 1.622693 1.240952 14.067784 30.28555
+ABESS         0.61016057 1.612404 1.237028 14.658917 30.02303
+BORUTA        0.44510341 1.641015 1.224435  9.649998 31.14848
+
+Model lgarchx eliminated 2023-04-23 00:02:24.420867
+Model lgarch eliminated 2023-04-23 00:02:28.993158
+Model fboruta eliminated 2023-04-23 00:02:32.695015
+###########################################################################################################################
+Superior Set Model created	:
+      Rank_M       v_M  MCS_M Rank_R       v_R  MCS_R     Loss
+lasso      2  1.213796 0.2268      2  1.213796 0.2268 3.654093
+abess      1 -1.213796 1.0000      1 -1.213796 1.0000 3.650040
+p-value	:
+[1] 0.2268
+
+###########################################################################################################################
+Model lgarch eliminated 2023-04-23 00:02:40.834398
+Model lgarchx eliminated 2023-04-23 00:02:45.583168
+###########################################################################################################################
+Superior Set Model created	:
+        Rank_M        v_M  MCS_M Rank_R        v_R  MCS_R     Loss
+lasso        2 -0.3622454 1.0000      3  1.3938054 0.2756 2.633134
+abess        1 -1.0900769 1.0000      1 -0.9498376 1.0000 2.599846
+fboruta      3  0.8486033 0.4604      2  0.9498376 0.5358 2.692929
+p-value	:
+[1] 0.4604
+
+###########################################################################################################################
+Model lgarchx eliminated 2023-04-23 00:02:52.687984
+Model lgarch eliminated 2023-04-23 00:02:55.818207
+###########################################################################################################################
+Superior Set Model created	:
+        Rank_M       v_M MCS_M Rank_R       v_R MCS_R    Loss
+fboruta      1 -3.430349     1      1 -3.430349     1 3.67897
+p-value	:
+[1] 2e-04
+
+###########################################################################################################################
+Model lgarchx eliminated 2023-04-23 00:02:59.221445
+Model lgarch eliminated 2023-04-23 00:03:02.327563
+###########################################################################################################################
+Superior Set Model created	:
+        Rank_M       v_M MCS_M Rank_R       v_R MCS_R    Loss
+fboruta      1 -3.433497     1      1 -3.433497     1 3.67897
+p-value	:
+[1] 6e-04
+
+###########################################################################################################################Time difference of 32.55302 mins

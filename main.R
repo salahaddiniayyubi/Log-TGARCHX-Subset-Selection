@@ -98,7 +98,7 @@ best_lambda <- glmnet_mod$bestTune$lambda
 print("start cluster for predictions")
 test_set <- createTimeSlices(data$returns,
       initialWindow = NROW(data) - test_len,
-            fixedWindow = FALSE
+            fixedWindow = TRUE
             )
 cl <- makeCluster(detectCores())
 registerDoParallel(cl)
@@ -135,7 +135,7 @@ cv_dat <- as.data.frame(cv_dat
 )
 
 cv_set <- createTimeSlices(cv_dat$errs, initialWindow =
-          NROW(cv_dat) - val_len, fixedWindow = TRUE
+          NROW(cv_dat) - val_len, fixedWindow = FALSE
           )
 cv_dat <- cv_dat[, !(names(cv_dat) %in% c("returns"))
           ]
